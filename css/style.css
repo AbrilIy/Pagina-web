@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Oswald:wght@300&display=swap');
+
+*{
+	box-sizing: border-box;
+}
+
+img{
+	display: block;
+	max-width: 100%;
+}
+
+body{
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: font-family: 'Oswald', sans-serif;
+	letter-spacing: 1.5;
+}
+
+.section__title{
+	text-align: center;
+	font-size: 40px;
+	color: #00cec9;
+}
+
+.content{
+	margin: auto;
+	width: 98%;
+}
+
+.header{
+	height: 60px;
+}
+
+.header .content{
+	display: flex;
+	justify-content: space-between;
+}
+
+.logo, .icon__menu{
+	margin: 5px;
+}
+
+.icon__menu{
+	display: block;
+	width: 40px;
+	height: 40px;
+	font-size: 30px;
+	background: #00cec9;
+	color: #fff;
+	text-align: center;
+	line-height: 45px;
+	border-radius: 5px;
+	margin-left: auto;
+	cursor: pointer;
+}
+
+.nav{
+	position: absolute;
+	top: 60px;
+	left: -100%;
+	width: 100%;
+	transition: all 0.4s;
+}
+
+.menu{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu__link{
+	display: block;
+	padding: 20px;
+	text-decoration: none;
+	color: #000;
+}
+
+.menu__link:hover, .select{
+	background: #00cec9;
+}
+
+.show{
+	left: 0;
+}
+
+/*-------Estilo de banner---------*/
+.banner{
+	margin-top: -60px;
+	position: relative;
+	z-index: -1000;
+	margin-bottom: 20px;
+}
+
+.banner .content{
+	position: absolute;
+	top: 25%;
+	left: 20%;
+	transform: translateX(-50%) translateY(-50);
+	width: 100%;
+	color: #000;
+
+}
+
+.banner__txt{
+	display: none;
+}
+
+/*--------Estilos de info-------*/
+.info__column{
+	background-color: #00cec9;
+	color: #fff;
+	padding: 15px;
+	margin-bottom: 30px;
+}
+
+/*--------Estilos de cursos-------*/
+.courses__column{
+	position: relative;
+	margin-bottom: 30px;
+}
+
+.courses__description{
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #fff;
+	background: rgba(0,0,0,0.5);
+	width: 60%;
+	height: 100%;
+	padding: 5px;
+}
+
+.courses__title{
+	font-size: 25px;
+	margin: 5px 0;
+}
+
+.cursos__img{
+	width: 100%;
+}
+
+/*--------Estilos de footer-------*/
+.footer{
+	background: #333;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+}
+
+.footer .social .icon{
+	
+	color: #fff;
+	text-decoration: none;
+	font-size: 30px;
+	padding: 10px;
+	border-radius: 50%;
+	width: 50%;
+	height: 50%;
+	line-height: 40px;
+}
+
+/*--------Estilos responsive-------*/
+@media(min-width: 480px){
+	.logo{
+		font-size: 40px;
+	}
+
+	.banner__title{
+		font-size: 30px;
+		margin: 10px 0;
+	}
+
+	.banner__txt{
+		display: block;
+		font-size: 18px;
+		margin: 5px 0;
+	}
+
+	.info, .cursos{
+		display: flex;
+		justify-content: space-between;
+		margin-top: -80px;
+	}
+
+	.info__column{
+		width: 32%;
+	}
+
+	.info__title{
+		font-size: 30px;
+		margin: 5px;
+	}
+
+	.cursos{
+		flex-wrap: wrap;
+		margin-top: 0;
+	}
+
+	.section__title{
+		width: 100%;
+	}
+
+	.courses__column{
+		width: 48%;
+	}
+
+	.footer .social .icon{
+	margin: 0 10;
+}
+
+@media(min-width: 768px){
+
+	.banner__title{
+		font-size: 50px;
+	}
+
+	.courses__title{
+		font-size: 35px;
+	}
+}
+
+@media(min-width: 1024px){
+
+	.content{
+		content: 1000px;
+	}
+
+	.section__title{
+		font-size: 50px;
+		margin: 15px 0;
+	}
+
+	.nav{
+		position: static;
+		width: auto;
+	}
+
+	.menu{
+		display: flex;
+	}
+
+	.icon__menu{
+		display: none;
+	}
+
+	.menu__link{
+		background: none;
+		font-size: 20px;
+	}
+
+	.select{
+		background: #00cec9;
+	}
+
+	.banner__title{
+		font-size: 60px;
+	}
+
+	.banner__txt{
+		font-size: 25px;
+	}
+
+	.info{
+		margin-top: -110px;
+	}
+
+	.info__column{
+		padding: 30px;
+	}
+
+	.info__title{
+		font-size: 40px;
+		text-align: center;
+	}
+
+	.courses__description{
+		padding: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: center;	
+	}
+
+	.courses__title{
+		font-size: 50px;
+		margin: 0;
+	}
+
+	.courses__txt{
+		font-size: 20px;
+	}
+}
+
+@media(min-width: 1280px){
+	.content{
+		width: 1200px;
+	}
+
+	.logo{
+		font-size: 55px;
+	}
+
+	.banner .content{
+		top: 40%;
+	}
+
+	.info{
+		margin-top: -200px;
+	}
+}
